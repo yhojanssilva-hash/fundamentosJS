@@ -5,9 +5,9 @@ console.log("Conexion exitosa con js...");
 //Tu edad en 5 años
 //Tu edad hace 10 años
 //Muestra ambos resultados en consola.
-function edadproyectada(){
-    let edad=16;
-    alert("Boton funcionando...");
+function edadproyectada() {
+    let edad = 16;
+
     alert(`Mi edad es: ${edad} \nEn 5 años tendre: ${edad + 5} \nHace 10 años tenia: ${edad - 10}`);
 }
 
@@ -15,7 +15,7 @@ function edadproyectada(){
 //Un producto cuesta $25.000 y tiene un descuento del 20%.
 //Calcula el precio final
 //Muestra el resultado
-    function compradescuento(){
+function compradescuento() {
     let precio = 25000;
     let descuento = precio * 0.20;
     let final = precio - descuento;
@@ -28,7 +28,7 @@ function edadproyectada(){
 //Declara 3 notas decimales:
 //Calcula el promedio
 //Redondea el resultado usando Math.round()
-function promedionotas(){
+function promedionotas() {
     let n1 = 6.7;
     let n2 = 8.9;
     let n3 = 7.2;
@@ -43,7 +43,7 @@ function promedionotas(){
 //Auméntala en 3 grados
 //Luego disminúyela en 5 grados
 //Muestra el resultado final
-function temperatura(){
+function temperatura() {
     let temp = 17;
     temp += 3; //temp = temp + 3
     temp -= 5; //temp = temp - 5
@@ -56,41 +56,53 @@ function temperatura(){
 //Calcula su sueldo
 //Si trabaja 5 horas extra, agrégalas usando incremento
 //Muestra el nuevo sueldo
-function sueldosemanal(){
-    let horas = 45;
+function sueldosemanal() {
     let valorHora = 8000;
-    let sueldo = horas * valorHora;
-    horas += 5; //horas = horas + 5
-    sueldo = horas * valorHora;
-}
+    let cantidadhora = 45;
+    let sueldo = valorHora * cantidadhora;
+    let sueldoNuevo = valorHora * (cantidadhora + 5);
+    alert(`sueldo actual : $${sueldo}sueldo nuevo con incremento: $${sueldoNuevo}`);
+};
 
 //🔹 Ejercicio 6: División y resto
 //Declara dos números:
 //Calcula la división
 //Calcula el módulo (%)
 //Explica el resultado en consola
-function divisionyresto(){
-    
-    alert("Boton funcionando...");
+function divisionyresto() {
+    let a = 10;
+    let b = 3;
+
+    let division = a / b;
+    let resto = a % b;
+
+    alert(`División: ${division}\nResto: ${resto}`);
 }
 
 //🔹 Ejercicio 7: Comparación de números
 //Declara dos números:
 //Muestra si el primero es mayor que el segundo
 //Verifica si uno de ellos es igual a 10
-function comparaciondenumeros(){
-    
-    alert("Boton funcionando...");
+
+function comparaciondenumeros() {
+    let a = 12;
+    let b = 10;
+
+    alert(`¿A es mayor que B? ${a > b}\n¿Alguno es 10? ${a === 10 || b === 10}`);
 }
+
 
 //🔹 Ejercicio 8: Notación científica aplicada
 //Declara:
 //Una población usando notación científica (ej: 1e6)
 //Divide esa población en 4 grupos
 //Muestra el resultado
-function notacioncientifica(){
-    
-    alert("Boton funcionando...");
+function notacioncientifica() {
+
+    let poblacion = 1e6;
+    let grupo = poblacion / 4;
+
+    alert(`Población total: ${poblacion}\nCada grupo: ${grupo}`);
 }
 
 //🔹 Ejercicio 9: Potencia y cálculo combinado
@@ -98,9 +110,11 @@ function notacioncientifica(){
 //3 elevado a 4
 //Luego multiplícalo por 2
 //Resta 10 al resultado final
-function protenciaycalculo(){
-    
-    alert("Boton funcionando...");
+
+function potenciaycalculo() {
+    let resultado = (3 ** 4) * 2 - 10;
+
+    alert(`Resultado final: ${resultado}`);
 }
 
 //🔹 Ejercicio 10: Dado aleatorio 🎲
@@ -109,7 +123,10 @@ function protenciaycalculo(){
 //Muestra el resultado
 //Indica si el número es mayor o igual a 4 (gana) o menor (pierde)
 
-function dadoaleatorio(){
-    
-    alert("Boton funcionando...");
+function dadoaleatorio() {
+    let dado = Math.floor(Math.random() * 6) + 1;
+
+    let resultado = dado >= 4 ? "Ganaste 🎉" : "Perdiste 😢";
+
+    alert(`Número: ${dado}\n${resultado}`);
 }
