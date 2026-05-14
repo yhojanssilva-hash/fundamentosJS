@@ -201,9 +201,41 @@ Largo nombre: ${cliente.length}`);
 
 // Mostrar la cantidad de caracteres del nombre
 
-function ejercicio19() {
-    let estudiante = "Lucas";
-    let promedio = 6.3;
-    let nombreMayus = estudiante.toUpperCase();
+function ejercicio19(){
+    let estudiante = "Chris";
+    let promedio = 6.6;
+    let nombremayus = estudiante.toUpperCase;
+    let cantidad = nombremayus.length;
+    let rendimiento;
     if (promedio >= 6.5) {
+        rendimiento = "Sobresaliente"
+        alert(`Estudiante: ${nombremayus}
+        cantidad de caracteres: ${cantidad}
+        promedio final: ${promedio}
+        clasificación: ${rendimiento}`)
+    }  else if (promedio >= 6.0) {
+        rendimiento = "Muy buen rendimiento"
+        alert(`Estudiante: ${nombremayus}
+        cantidad de caracteres: ${cantidad}
+        promedio final: ${promedio}
+        clasificación: ${rendimiento}`)
+    } else if (promedio >= 5.0) {
+        rendimiento = "Buen rendimiento"
+        alert(`Estudiante: ${nombremayus}
+        cantidad de caracteres: ${cantidad}
+        promedio final: ${promedio}
+        clasificación: ${rendimiento}`)
+    } else if (promedio >= 4.0) {
+        rendimiento = "Suficiente"
+        alert(`Estudiante: ${nombremayus}
+        cantidad de caracteres: ${cantidad}
+        promedio final: ${promedio}
+        clasificación: ${rendimiento}`)
+    } else {
+        rendimiento = "Insuficiente"
+        alert(`Estudiante: ${nombremayus}
+        cantidad de caracteres: ${cantidad}
+        promedio final: ${promedio}
+        clasificación: ${rendimiento}`)
+    }
 }
