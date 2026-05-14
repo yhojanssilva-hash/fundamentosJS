@@ -1,122 +1,209 @@
 console.log("Conexion exitosa con js");
+// EJERCICIO 11
 // Resultado esperado en alert:
-// "Bienvenido Juan"
+// `El estudiante Juan tiene nota 6.5 y su resultado es: Excelente rendimiento`
 
-function ejercicio1() {
-    let nombre = "yhojans";
-    alert(`Bienvenido ${nombre}`);
-}
+function ejercicio11() {
+    let nombre = "Juan";
+    let nota = 6.5;
 
-
-// EJERCICIO 2
-// Resultado esperado en alert:
-// "La suma es: 15"
-
-function ejercicio2() {
-    let suma = 10 + 5;
-    alert(`La suma es ${suma}`);
-}
-
-
-// EJERCICIO 3
-// Resultado esperado en alert:
-// "La resta es: 12"
-
-function ejercicio3() {
-    let resta = 20 - 8;
-    alert(`la resta es ${resta}`)
-}
-
-
-// EJERCICIO 4
-// Resultado esperado en alert:
-// "La multiplicación es: 24"
-
-function ejercicio4() {
-    let multiplicacion = 6 * 4;
-    alert(`La multiplicacion es ${multiplicacion}`)
-}
-
-
-// EJERCICIO 5
-// Resultado esperado en alert:
-// "El promedio es: 5.7"
-
-function ejercicio5() {
-    let nota1 = 6.0;
-    let nota2 = 5.5;
-    let nota3 = 5.7;
-    let promedio = (nota1 + nota2 + nota3) / 3;
-    alert(`El promedio es: ${promedio}`);
-}
-
-
-// EJERCICIO 6
-// Resultado esperado en alert:
-// "Es mayor de edad"
-
-function ejercicio6() {
-    let edad = 18;
-    if (edad >= 18) {
-        alert("Eres mayor de edad")
-    }
-}
-
-
-// EJERCICIO 7
-// Resultado esperado en alert:
-// "El número es par"
-
-function ejercicio7() {
-    let numero = 21;
-    if (numero % 2 === 0) {
-        alert("El numero es par")
+    if (nota >= 6.0) {
+        alert(`El estudiante ${nombre} tiene nota ${nota} y su resultado es: Excelente rendimiento`);
     } else {
-        alert("El numero es impar")
+        alert("Otro resultado");
     }
-
 }
 
-
-// EJERCICIO 8
+// EJERCICIO 12
 // Resultado esperado en alert:
-// "Estudiante aprobado"
+// `El nombre convertido es: DANIEL PÉREZ y tiene 12 caracteres`
 
-function ejercicio8() {
-    let nota = 6.7;
+function ejercicio12() {
+    let nombre = "Daniel Pérez";
 
-    if (nota > 4.0) {
-        alert(`La nota es: ${nota}\nEstudiante aprobado`);
+    let nombreMayus = nombre.toUpperCase();
+    let cantidad = nombreMayus.length;
+
+    alert(`El nombre convertido es: ${nombreMayus} y tiene ${cantidad} caracteres`);
+}
+// EJERCICIO 13
+// Resultado esperado en alert:
+// `El correo convertido es: ejemplo@gmail.com y el resultado es: correo válido`
+
+function ejercicio13() {
+    let correo = "ejemplo@gmail.com";
+
+    if (correo.includes("@") && correo.includes(".")) {
+        alert(`El correo convertido es: ${correo} y el resultado es: correo válido`);
     } else {
-        alert(`La nota es: ${nota}\nEstudiante reprobado`);
+        alert(`El correo convertido es: ${correo} y el resultado es: correo inválido`);
     }
 }
 
-
-// EJERCICIO 9
+// EJERCICIO 14
 // Resultado esperado en alert:
-// "Precio final con descuento: $18000"
+// `La frase "Estoy aprendiendo JavaScript" tiene 28 caracteres y corresponde a una frase larga`
 
-function ejercicio9() {
-    let precio = 20000;
-    let descuento = precio * 0.1;
-    let precioFinal = precio - descuento;
+function ejercicio14() {
+    let frase = "Estoy aprendiendo JavaScript";
+    let cantidad = frase.length;
 
-    alert(`Precio final con descuento: $${precioFinal}`);
-}
-
-
-// EJERCICIO 10
-// Resultado esperado en alert:
-// "El número mayor es: 22"
-
-function ejercicio10() {
-    let num1 = 10;
-    let num2 = 5;
-
-    if (num1 > num2) {
-        alert(`El número mayor es: ${num1}`);
+    if (cantidad > 20) {
+        alert(`La frase "${frase}" tiene ${cantidad} caracteres y corresponde a una frase larga`);
     } else {
-        alert(`El número mayor es: ${num2}`);
+        alert(`La frase "${frase}" tiene ${cantidad} caracteres y corresponde a una frase corta`);
     }
+}
+
+
+// EJERCICIO 15
+// Resultado esperado en alert:
+// `El producto TECLADO tiene un precio final de $45000`
+
+function ejercicio15() {
+    let producto = "teclado";
+    let precio = 50000;
+    let descuento = 0.1;
+
+    let precioFinal = precio - (precio * descuento);
+
+    alert(`El producto ${producto.toUpperCase()} tiene un precio final de $${precioFinal}`);
+}
+
+// Ejercicio 16: Boleta de compra con clasificación de cliente
+
+// Crear una función que almacene el nombre de un cliente, el nombre de un producto y el precio. Luego:
+// Convertir el nombre del cliente a mayúsculas
+// Determinar el tipo de cliente según el precio:
+// Mayor o igual a 100.000 → Cliente Premium (20% descuento)
+// Mayor o igual a 50.000 → Cliente Frecuente (10% descuento)
+// Menor a 50.000 → Cliente Normal (sin descuento)
+function ejercicio16() {
+    let cliente = "Tomas";
+    let producto = "celular";
+    let precio = 120000;
+
+    let clienteMayus = cliente.toUpperCase();
+    let precioFinal;
+    let tipoCliente;
+
+    if (precio >= 100000) {
+        tipoCliente = "Cliente Premium";
+        precioFinal = precio - (precio * 0.2);
+
+    } else if (precio >= 50000) {
+        tipoCliente = "Cliente Frecuente";
+        precioFinal = precio - (precio * 0.1);
+
+    } else {
+        tipoCliente = "Cliente Normal";
+        precioFinal = precio;
+    }
+
+    alert(`Cliente: ${clienteMayus}
+Producto: ${producto}
+Tipo: ${tipoCliente}
+Precio original: $${precio}
+Precio final: $${precioFinal}`);
+}
+
+
+
+// Crear una función que almacene una frase y un puntaje numérico. Luego:
+// Ejercicio 17: Análisis de frase con puntuación
+// Convertir la frase a minúsculas
+// Contar la cantidad de caracteres
+// Clasificar el puntaje:
+// 90 o más → Excelente
+// 70 o más → Bueno
+// Menor a 70 → Insuficiente
+
+// Mostrar:
+// Frase transformada
+// Largo de la frase
+// Puntaje
+// Clasificación
+function ejercicio17() {
+    let fase = "Eestoy aprendiendo JavaScript";
+    let puntaje = 85;
+    let fraseMinus = fase.LowerCase();
+    let cantidad = fraseMinus.length;
+    let clasification;
+    if (puntaje >= 90) {
+        clasification = "Excelente";
+    } else if (puntaje >= 70) {
+        clasification = "Bueno";
+    } else {
+        clasification = "Insuficiente";
+    }
+}
+
+
+//Ejercicio 18: Evaluación de tres notas con estado final
+
+//Crear una función que almacene el nombre de un estudiante y tres notas. Luego:
+
+//Calcular el promedio
+//Convertir el nombre a mayúsculas
+//Determinar el estado:
+//Promedio ≥ 6.0 → Destacado
+//Promedio ≥ 4.0 → Aprobado
+//Promedio < 4.0 → Reprobado
+
+//Además:
+//Contar la cantidad de caracteres del nombre
+//
+//Mostrar:
+//Nombre en mayúsculas
+//Cantidad de caracteres del nombre
+//Promedio
+//Estado final
+
+function calcularNotas() {
+    let cliente = "papelucho";
+    let n1 = 2.9;
+    let n2 = 7.0;
+    let n3 = 6.7;
+
+    let promedio = (n1 + n2 + n3) / 3;
+    let nombreMayusculas = cliente.toUpperCase();
+
+    if (promedio >= 6.0) {
+        alert(`El estudiante ${nombreMayusculas} esta destacado.
+Promedio: ${promedio}.
+Largo nombre: ${cliente.length}`);
+
+    } else if (promedio >= 4) {
+        alert(`El estudiante ${nombreMayusculas} esta Aprobado
+Promedio: ${promedio}.
+Largo nombre: ${cliente.length}`);
+
+    } else {
+        alert(`El estudiante ${nombreMayusculas} esta Reprobado
+Promedio: ${promedio}.
+Largo nombre: ${cliente.length}`);
+    }
+}
+
+
+// Ejercicio 19: Clasificación de desempeño con más niveles
+// Crear una función que almacene el nombre de un estudiante y su promedio final. Luego:
+
+// Convertir el nombre a mayúsculas
+// Clasificar el rendimiento según:
+// ≥ 6.5 → Sobresaliente
+// ≥ 6.0 → Muy buen rendimiento
+// ≥ 5.0 → Buen rendimiento
+// ≥ 4.0 → Suficiente
+// < 4.0 → Insuficiente
+
+// Además:
+
+// Mostrar la cantidad de caracteres del nombre
+
+function ejercicio19() {
+    let estudiante = "Lucas";
+    let promedio = 6.3;
+    let nombreMayus = estudiante.toUpperCase();
+    if (promedio >= 6.5) {
 }
